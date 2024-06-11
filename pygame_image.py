@@ -17,13 +17,13 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
+        screen.blit(bg_img, [-tmr, 0])
         kk_rct = kk_img.get_rect() #こうかとんrectの抽出
         kk_rct.center = 300, 200
         screen.blit(kk_img, kk_rct) #kk_imgをkk_rctの設定に従って貼り付け
         pg.display.update()
         tmr += 1        
-        clock.tick(10)
+        clock.tick(200)
 
 
 if __name__ == "__main__":
